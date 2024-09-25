@@ -1,16 +1,13 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ListarFuncionarios from "./components/ListarFuncionarios";
-import AdicionarFuncionario from "./components/AdicionarFuncionario";
-import EditarFuncionario from "./components/EditarFuncionario";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LoginPage from './pages/LoginPage';
+import AdminDashboard from './pages/AdminDashboard';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<ListarFuncionarios />} />
-        <Route path="/adicionar" element={<AdicionarFuncionario />} />
-        <Route path="/editar/:id" element={<EditarFuncionario />} />
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/dashboard" element={<AdminDashboard />} />
       </Routes>
     </Router>
   );
